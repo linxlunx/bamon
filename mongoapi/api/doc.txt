@@ -1,0 +1,30 @@
+INSERT DATA
+
+METHOD: POST
+URL: http://192.168.1.126:5555/<collection>/insert
+EXAMPLE: curl -d 'data={"name": "linggar", "address": "yogyakarta"}' http://192.168.1.126:5555/anggota/insert
+
+notes:
+collection adalah nama table, untuk list data selanjutnya menggunakan key name. Jadi kalau mau menggunakan pencarian, harus ada key name pada saat insert.
+
+LIST DATA
+
+METHOD: GET
+URL: http://192.168.1.126:5555/<collection>?name=<search_name>
+EXAMPLE: http://192.168.1.126:5555/anggota?name=ling
+
+notes:
+collection adalah nama table, query string name dapat digunakan untuk mencari sebuah data, bersifat opsional.
+
+GET SINGLE DATA
+
+METHOD: GET
+URL: http://192.168.1.126:5555/<collection>/<id>
+EXAMPLE: http://192.168.1.126:5555/anggota/5b8cfd47a7129c5ae09a8e8d
+
+EDIT SINGLE DATA
+
+METHOD: POST
+URL: http://192.168.1.126:5555/<collection>/<id>/edit
+EXAMPLE:
+curl -d 'data={"name": "linggar"}' http://192.168.1.126:5555/anggota/5b8cfd47a7129c5ae09a8e8d/edit 
