@@ -37,11 +37,11 @@ $ python index.py
 
 ### FEATURES
 
-[INSERT DATA](#INSERT DATA)
-[LIST DATA](#LIST DATA)
-[GET SINGLE DATA](#GET SINGLE DATA)
-[EDIT DATA](#EDIT DATA)
-[DELETE DATA](#DELETE DATA)
+* [INSERT DATA](#insert-data)
+* [LIST DATA](#list-data)
+* [GET SINGLE DATA](#get-single-data)
+* [EDIT DATA](#edit-data)
+* [DELETE DATA](#delete-data)
 
 ## INSERT DATA
 
