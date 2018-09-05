@@ -36,9 +36,19 @@ $ python index.py
 ```
 
 ### FEATURES
-- **INSERT DATA**
+
+[INSERT DATA](#INSERT DATA)
+[LIST DATA](#LIST DATA)
+[GET SINGLE DATA](#GET SINGLE DATA)
+[EDIT DATA](#EDIT DATA)
+[DELETE DATA](#DELETE DATA)
+
+## INSERT DATA
+
 METHOD: POST
-URL: http://<host>:<port>/<collection>/insert
+
+URL: http://[host]:[port]/[collection]/insert
+
 Params: data
 ```
 $ curl -d 'data={"name": "Robert", "country": "Germany"}' http://localhost:5000/users/insert
@@ -52,9 +62,11 @@ $ curl -d 'data={"name": "Robert", "country": "Germany"}' http://localhost:5000/
 }
 ```
 
-- **LIST DATA**
+## LIST DATA
+
 METHOD: GET
-URL: http://<host>:<port>/<collection>
+
+URL: http://[host]:[port]/[collection]
 ```
 $ curl http://localhost:5000/users
 {
@@ -101,9 +113,11 @@ $ curl http://localhost:5000/users?country=Indonesia
   ]
 }
 ```
-- **GET SINGLE DATA**
+## GET SINGLE DATA
+
 METHOD: GET
-URL: http://<host>:<port>/<collection>/<id>
+
+URL: http://[host]:[port]/[collection]/[id]
 ```
 $ curl http://localhost:5000/users/5b8f72d4bffae1000b8f5c45
 {
@@ -116,9 +130,12 @@ $ curl http://localhost:5000/users/5b8f72d4bffae1000b8f5c45
   "id": "5b8f72d4bffae1000b8f5c45"
 }
 ```
-- **EDIT DATA**
+## EDIT DATA
+
 METHOD: POST
-URL: http://<host>:<port>/<collection>/<id>/edit
+
+URL: http://[host]:[port]/[collection]/[id]/edit
+
 Params: data
 ```
 $ curl -d 'data={"name": "Anni"}' http://localhost:5000/users/5b8f72d4bffae1000b8f5c45/edit
@@ -131,9 +148,11 @@ $ curl -d 'data={"name": "Anni"}' http://localhost:5000/users/5b8f72d4bffae1000b
   }
 }
 ```
-- **DELETE DATA**
+## DELETE DATA
+
 METHOD: GET
-URL: http://<host>:<port>/<collection>/<id>/delete
+
+URL: http://[host]:[port]/[collection]/[id]/delete
 ```
 $ curl http://localhost:5000/users/5b8f72d4bffae1000b8f5c45/delete
 {
